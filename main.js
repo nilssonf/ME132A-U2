@@ -50,8 +50,40 @@ function addFurnitureToDatabase (database, furniture){
 }
 
 // Removes a furniture based on its name from the database
-function removeFurnitureByName (){
+function removeFurnitureById (furnitures, id){
+    for (let i = 0; i < furnitures.length; i++){
+        let furniture = furnitures [i];
 
+        if (furniture.id == id) {
+            furnitures.splice(i, 1);
+            // End with return to stop the loop 
+            return; 
+        }
+    }
+}
+
+// Return all the furniture based on the country of origin
+function getFurnituresByCountry(furnitures, country){
+    let furnituresByCountry = [];
+
+    for (let furniture of furnitures) {
+        if (furniture.country.toLowerCase() == country.toLowerCase()){
+            furnituresByCountry.push(furniture);
+        }
+    }
+    return furnituresByCountry;
+}
+
+// Return all the furniture based on the designer
+function getFurnituresByDesigner(furnitures, designer) {
+    let furnituresByDesigner = [];
+
+    for (let furniture of furnitures) {
+        if (furniture.designer == designer){
+            furnituresByDesigner.push(furniture);
+        }
+    }
+    return furnituresByDesigner;
 }
 
 // Global values to initialize the page
