@@ -86,5 +86,52 @@ function getFurnituresByDesigner(furnitures, designer) {
     return furnituresByDesigner;
 }
 
+// Following are the eventhandlers 
+
+// Eventhandler for the submition of id="add-furniture-form"
+function onAddFurnitureSubmit(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let designer = document.getElementById("designer").value;
+    let year = Number(document.getElementById("year").value);
+    let country = document.getElementById("country").value;
+
+    let furniture = createNewFurniture(name, designer, year, country);
+
+    furniture.id = database[database.length - 1].id + 1; 
+
+    addFurnitureToDatabase(database, furniture);
+    renderFurnitures(database);
+
+    let form = document.getElementById("add-furniture-form");
+    form.reset();
+
+}
+
+// Eventhandler to add "click" to the button with id="add"
+function setAddFurnitureHandler() {
+    let form = document.getElementById("add-furniture-form");
+    form.addEventListener("submit", onAddFurnitureSubmit);
+}
+
+// Remove furniture when user clicks the remove button
+function onRemoveFurnitureClick(event) {
+    let button = event.target; 
+    let id = button.parentElement.id;
+
+    removeFurnitureById(database, id);
+    renderFurnitures(database);
+}
+
+// Add the click-eventhandler to all the remove-buttons
+function setRemoveFurnitureHandlers() {
+    let buttons = document.querySelectorAll(".furniture button");
+
+    for (let button of buttons) {
+        button.addEventListener("click", onAddFurnitureSubmit);
+    }
+}
+
 // Global values to initialize the page
 renderFurnitures(database);
