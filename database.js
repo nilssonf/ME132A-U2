@@ -36,6 +36,41 @@ let database = [
         designer:"Alvar Aalto" ,
         year: 1933,
         country: "Finland",
+    },
+    {
+        id: 6,
+        name: "Lamino" ,
+        designer:"Yngve Ekström" ,
+        year: 1956,
+        country: "Sweden",
+    },
+    {
+        id: 7,
+        name: "Stringhyllan" ,
+        designer:"Nisse Strinning" ,
+        year: 1955,
+        country: "Sweden",
+    },
+    {
+        id: 8,
+        name: "Karin" ,
+        designer:"Bruno Mathsson" ,
+        year: 1969,
+        country: "Sweden",
+    },
+    {
+        id: 9,
+        name: "Arka" ,
+        designer:"Yngve Ekström" ,
+        year: 1955,
+        country: "Sweden",
+    },
+    {
+        id: 10,
+        name: "Pernilla" ,
+        designer:"Bruno Mathsson" ,
+        year: 1943,
+        country: "Sweden",
     }
    
 ];
