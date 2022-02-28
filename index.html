@@ -8,9 +8,44 @@
     <title>Furniture Hub</title>
   </head>
   <body>
+      
+    <h1>The Furniture Hub</h1>
+
+    <form id="add-furniture-form">
+      <input id="name" type="text" placeholder="Name" />
+      <input id="designer" type="text" placeholder="Designer" />
+      <input id="year" type="number" placeholder="Production year" />
+      <input id="country" type="text" placeholder="Country of origin" />
+      <button>Add furniture</button>
+    </form>
+
+    <div id="filters">
+      <form id="filter-by-designer"></form>
+      <input
+        id="filter-desinger"
+        type="text"
+        placeholder="Filter by designer"
+      />
+      <button>Filter</button>
+
+      <form id="filter-by-country"></form>
+      <input id="filter-country" type="text" placeholder="Filter by country" />
+      <button>Filter</button>
+
+      <button id="reset" type="button">Show all furniture</button>
+    </div>
+
+    <div id="titels">
+        <div>Name</div>
+        <div>Designer</div>
+        <div>Year</div>
+        <div>Country of origin</div>
+        <div>Actions</div>
+    </div>
+
+    <div id="furniture"></div>
 
     <script src="database.js"></script>
     <script src="main.js"></script>
-
   </body>
 </html>
