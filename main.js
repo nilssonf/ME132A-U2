@@ -29,6 +29,7 @@ function renderFurnitures(furnitures){
     }
 
     // Add remove-handlers for our dogs
+    setRemoveFurnitureHandlers();
 }
 
 
@@ -52,7 +53,7 @@ function addFurnitureToDatabase (database, furniture){
 // Removes a furniture based on its name from the database
 function removeFurnitureById (furnitures, id){
     for (let i = 0; i < furnitures.length; i++){
-        let furniture = furnitures [i];
+        let furniture = furnitures[i];
 
         if (furniture.id == id) {
             furnitures.splice(i, 1);
@@ -129,7 +130,7 @@ function setRemoveFurnitureHandlers() {
     let buttons = document.querySelectorAll(".furniture button");
 
     for (let button of buttons) {
-        button.addEventListener("click", onAddFurnitureSubmit);
+        button.addEventListener("click", onRemoveFurnitureClick);
     }
 }
 
@@ -157,5 +158,26 @@ function onFilterByCountrySubmit(event) {
     renderFurnitures(furnitures);
 }
 
+// Resetting the list to its original state
+function onShowAllFurnituresClick() {
+    document.getElementById("filter-designer").value = "";
+    document.getElementById("filter-country").value = "";
+
+    renderFurnitures(database);
+}
+
+//
+function setFilterFurnitureHandlers(){
+    let designerForm = document.getElementById("filter-by-designer");
+    let countryForm = document.getElementById("filter-by-country");
+    let showAllFurniture = document.getElementById("reset");
+
+    designerForm.addEventListener("submit", onFilterByDesignerSubmit);
+    countryForm.addEventListener("submit", onFilterByCountrySubmit);
+    showAllFurniture.addEventListener("click", onShowAllFurnituresClick);
+}
+
 // Global values to initialize the page
 renderFurnitures(database);
+setAddFurnitureHandler();
+setFilterFurnitureHandlers();
