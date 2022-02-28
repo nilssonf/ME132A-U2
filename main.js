@@ -133,5 +133,29 @@ function setRemoveFurnitureHandlers() {
     }
 }
 
+// Here follows the functions to control the filters
+
+// Filter the furniture by designer 
+function onFilterByDesignerSubmit(event) {
+    event.preventDefault();
+
+    let designer = document.getElementById("filter-designer").value;
+
+    let furnitures = getFurnituresByDesigner(database, designer);
+
+    renderFurnitures(furnitures);
+}
+
+// Filter the furniture by country of origin
+function onFilterByCountrySubmit(event) {
+    event.preventDefault();
+
+    let country = document.getElementById("filter-country").value;
+
+    let furnitures = getFurnituresByCountry(database, country);
+
+    renderFurnitures(furnitures);
+}
+
 // Global values to initialize the page
 renderFurnitures(database);
