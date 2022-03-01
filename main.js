@@ -97,13 +97,25 @@ function onAddFurnitureSubmit(event) {
     let designer = document.getElementById("designer").value;
     let year = Number(document.getElementById("year").value);
     let country = document.getElementById("country").value;
-
+    
+    if (name == ""){
+        return alert("You forgot something");
+    } else if (designer == "") {
+        return alert("You forgot something");
+    } else if (year == "") {
+        return alert("You forgot something");
+    } else if(country == "") {
+        return alert("You forgot something");
+    } 
+        
     let furniture = createNewFurniture(name, designer, year, country);
 
     furniture.id = database[database.length - 1].id + 1; 
 
     addFurnitureToDatabase(database, furniture);
     renderFurnitures(database);
+
+   
 
     let form = document.getElementById("add-furniture-form");
     form.reset();
@@ -114,6 +126,7 @@ function onAddFurnitureSubmit(event) {
 function setAddFurnitureHandler() {
     let form = document.getElementById("add-furniture-form");
     form.addEventListener("submit", onAddFurnitureSubmit);
+    
 }
 
 // Remove furniture when user clicks the remove button
