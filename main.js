@@ -133,8 +133,14 @@ function setAddFurnitureHandler() {
 function onRemoveFurnitureClick(event) {
     let button = event.target; 
     let id = button.parentElement.id;
+    let confirmOk = confirm("Do you really want to remove this object");
 
-    removeFurnitureById(database, id);
+    if (confirmOk == true) {
+        removeFurnitureById(database, id);
+    } else {
+        return false;
+    }
+
     renderFurnitures(database);
 }
 
@@ -144,6 +150,7 @@ function setRemoveFurnitureHandlers() {
 
     for (let button of buttons) {
         button.addEventListener("click", onRemoveFurnitureClick);
+       
     }
 }
 
