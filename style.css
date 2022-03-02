@@ -1,66 +1,125 @@
 body {
-    margin: 0;
+    margin: 0 auto;
     height: 100vh;
+    max-width: 800px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+    background-image: url(dux-jetson-match-fatolj-cognac.png);
+    background-size: cover;
+    background-position-y: 25px;
+
     font-family: 'Inconsolata', monospace;
 }
 
 h1{
     display: flex;
     justify-content: center;
+
+    color: rgb(9, 9, 211);
+    font-size: 40px;
 }
 
 #add-furniture-form{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    padding: 10px;
+    
     gap: 10px;
 }
 
 #filters {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 10px;
-    gap: 10px;
+    padding: 30px 5px 30px 40px;
+    gap: 5px;
 }
 
 #titels {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 
-    background-color: ;
+    text-align: center;
+    background-color: rgb(9, 9, 211);
+    color: rgba(240, 248, 255, 0.925);
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    padding: 15px;
 }
 
 button {
-   color: blue;
-   background-color: rgb(224, 224, 178);
+   color: rgb(9, 9, 211);
+   background-color: rgba(240, 248, 255);
+
    border-radius: 10px;
+   
    border: none;
    font-family: 'Inconsolata', monospace;
-
 }
 
 button:hover {
-
+    cursor: pointer;
+    color: rgba(240, 248, 255);
+    background-color: rgb(9, 9, 211);
 }
 
 button:active {
-    
+    color:  rgba(240, 248, 255);
+    background-color: rgb(9, 9, 211);
 }
 
 #furnitures{
-    display: grid;
+    background-color: rgba(9, 9, 211, 0.438);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
 
+#furnitures > div > div:nth-child(3){
+    padding-left: 37px;
 }
 
 .furniture {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 5px;
+    color: rgba(240, 248, 255);
+    
+}
+
+.furniture:nth-child(odd){
+    background-color: rgb(9, 9, 211);
+}
+
+.furniture:last-child {
+    border-bottom-right-radius: 10px;
 }
 
 .furniture div{
     padding: 10px;
+}
+
+.filter-button{
+    padding: 5px 12px 5px 12px;
+}
+
+.furniture button {
+    border: solid 1px rgba(240, 248, 255);
+}
+#add-button {
+    padding: 5px 12px 5px 12px;
+    border: solid 1px rgb(9, 9, 211);
+}
+
+#reset {
+    padding: 5px 12px 5px 12px;
+    width: 150px;
+    margin-left: 40px;
+    border: solid 1px rgb(9, 9, 211);
+}
+
+li{
+    padding-top: 10px;
+}
+
+.filter-button{
+    border: solid 1px rgb(9, 9, 211);
 }

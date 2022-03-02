@@ -26,7 +26,7 @@ let database = [
     {
         id: 4,
         name: "Gatto Piccolo" ,
-        designer: "Achille & Pier Giacomo Castiglioni",
+        designer: "A.&P. Giacomo",
         year: 1960,
         country: "Italy",
     },

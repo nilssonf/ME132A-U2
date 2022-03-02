@@ -18,10 +18,10 @@
 
     <form id="add-furniture-form">
       <input id="name" type="text" placeholder="Name" />
-      <input id="designer" type="text" placeholder="Designer" />
-      <input id="year" type="number" placeholder="Production year" />
+      <input id="designer" type="text"  placeholder="Designer" />
+      <input id="year" type="number" size="15" placeholder="Production year"/>
       <input id="country" type="text" placeholder="Country of origin" />
-      <button>Add furniture</button>
+      <button id="add-button">Add furniture</button>
     </form>
 
     <div id="filters">
@@ -32,7 +32,7 @@
           placeholder="Filter by designer"
         />
 
-        <button>Filter</button>
+        <button class="filter-button">Filter</button>
       </form>
       
       <form id="filter-by-country">
@@ -42,10 +42,10 @@
           placeholder="Filter by country"
         />
 
-        <button>Filter</button>
+        <button class="filter-button">Filter</button>
       </form>
 
-      <button id="reset" type="button">Show all furniture</button>
+      <button id="reset" type="button">Reset the list</button>
     </div>
 
     <div id="titels">
