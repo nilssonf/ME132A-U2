@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <title>Furniture Hub</title>
   </head>
   <body>
-      
     <h1>The Furniture Hub</h1>
 
     <form id="add-furniture-form">
@@ -21,32 +26,37 @@
 
     <div id="filters">
       <form id="filter-by-designer">
-      <input
-        id="filter-designer"
-        type="text"
-        placeholder="Filter by designer"
-      />
-    
-      <button>Filter</button>
-    </form>
+        <input
+          id="filter-designer"
+          type="text"
+          placeholder="Filter by designer"
+        />
+
+        <button>Filter</button>
+      </form>
+      
       <form id="filter-by-country">
-      <input id="filter-country" type="text" placeholder="Filter by country" />
-    
-      <button>Filter</button>
-    </form>
+        <input
+          id="filter-country"
+          type="text"
+          placeholder="Filter by country"
+        />
+
+        <button>Filter</button>
+      </form>
 
       <button id="reset" type="button">Show all furniture</button>
     </div>
 
     <div id="titels">
-        <div>Name</div>
-        <div>Designer</div>
-        <div>Year</div>
-        <div>Country of origin</div>
-        <div>Actions</div>
+      <div>Name</div>
+      <div>Designer</div>
+      <div>Year</div>
+      <div>Country of origin</div>
+      <div>Actions</div>
     </div>
 
-    <div id="furnitures"></div>
+    <ol type="1" id="furnitures"></ol>
 
     <script src="database.js"></script>
     <script src="main.js"></script>

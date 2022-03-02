@@ -7,7 +7,8 @@ function renderFurniture(furniture){
     div.id = furniture.id;
 
     div.innerHTML = `
-        <div> ${furniture.name} </div>
+        
+        <li> ${furniture.name} </li>
         <div> ${furniture.designer} </div>
         <div> ${furniture.year} </div>
         <div> ${furniture.country} </div>
