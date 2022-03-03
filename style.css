@@ -54,17 +54,21 @@ button {
    
    border: none;
    font-family: 'Inconsolata', monospace;
+   transition: 0.3;
 }
 
 button:hover {
     cursor: pointer;
     color: rgba(240, 248, 255);
-    background-color: rgb(9, 9, 211);
+    background-color: rgba(9, 9, 211, 0.658);
+    
+    
 }
 
 button:active {
-    color:  rgba(240, 248, 255);
+    color: rgba(240, 248, 255);
     background-color: rgb(9, 9, 211);
+    opacity: 1;
 }
 
 #furnitures{
