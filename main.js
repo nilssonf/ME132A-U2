@@ -1,3 +1,5 @@
+// Github: https://github.com/nilssonf/ME132A-U2
+
 "use strict";
 
 // Renders a furniture-objetct into an HTML element
