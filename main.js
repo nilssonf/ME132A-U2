@@ -1,6 +1,7 @@
 "use strict";
 
 // Renders a furniture-objetct into an HTML element
+// e.g adds a new furniture to the list
 function renderFurniture(furniture){
     let div = document.createElement("div");
     div.classList.add("furniture");
@@ -29,7 +30,6 @@ function renderFurnitures(furnitures){
         furnituresElement.appendChild(furnitureElement);
     }
 
-    // Add remove-handlers for our dogs
     setRemoveFurnitureHandlers();
 }
 
@@ -65,6 +65,7 @@ function removeFurnitureById (furnitures, id){
 }
 
 // Return all the furniture based on the country of origin
+// Works together with the filter-function
 function getFurnituresByCountry(furnitures, country){
     let furnituresByCountry = [];
 
@@ -77,6 +78,7 @@ function getFurnituresByCountry(furnitures, country){
 }
 
 // Return all the furniture based on the designer
+// Works together with the filter-function
 function getFurnituresByDesigner(furnitures, designer) {
     let furnituresByDesigner = [];
 
@@ -91,6 +93,7 @@ function getFurnituresByDesigner(furnitures, designer) {
 // Following are the eventhandlers 
 
 // Eventhandler for the submition of id="add-furniture-form"
+// With alert-method when user forgets something
 function onAddFurnitureSubmit(event) {
     event.preventDefault();
 
@@ -123,7 +126,7 @@ function onAddFurnitureSubmit(event) {
 
 }
 
-// Eventhandler to add "click" to the button with id="add"
+// Eventhandler to add "click" to the button with id="add", e.g what happens when user clicks id=add
 function setAddFurnitureHandler() {
     let form = document.getElementById("add-furniture-form");
     form.addEventListener("submit", onAddFurnitureSubmit);
@@ -187,7 +190,7 @@ function onShowAllFurnituresClick() {
     renderFurnitures(database);
 }
 
-//
+// Which functions should be called when different buttons are used
 function setFilterFurnitureHandlers(){
     let designerForm = document.getElementById("filter-by-designer");
     let countryForm = document.getElementById("filter-by-country");
