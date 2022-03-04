@@ -116,8 +116,12 @@ function onAddFurnitureSubmit(event) {
         
     let furniture = createNewFurniture(name, designer, year, country);
 
+    if (database.length = database.length){
     furniture.id = database[database.length - 1].id + 1; 
-
+    } else {
+        furniture.id = 1; 
+    }
+    
     addFurnitureToDatabase(database, furniture);
     renderFurnitures(database);
 
